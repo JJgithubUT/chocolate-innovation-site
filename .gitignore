@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ignorar archivos repomix (útiles para trabajo)
+repomix-output.xml
