@@ -1,9 +1,11 @@
-// import { useState } from 'react'
+import React from 'react';
+import Contact from './sections/Contact.jsx';
 
 function App() {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden bg-[#0d0d12]">
       <main>
+        <Contact />
       </main>
     </div>
   );
