@@ -1,0 +1,66 @@
+name: 🚀 Feature Request / Petición de Características
+description: Sugiere una idea o una nueva funcionalidad para este proyecto.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por tu propuesta! Por favor, completa los siguientes campos para ayudarnos a entender mejor tu idea.
+
+  - type: textarea
+    id: problema-relacionado
+    attributes:
+      label: 🎯 ¿Tu sugerencia está relacionada con un problema?
+      description: Una descripción clara y concisa de cuál es el problema o la limitación actual.
+      placeholder: Ej. "Me resulta molesto tener que hacer clic tres veces para..."
+      value: "A mí me pasa que... "
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion-funcionalidad
+    attributes:
+      label: 💡 Descripción de la funcionalidad propuesta
+      description: Describe de forma clara y concisa qué es lo que quieres que pase y cómo imaginas que debería funcionar.
+      placeholder: Ej. "Quiero que se agregue un botón de acceso rápido en..."
+      value: "Me gustaría que el sistema pudiera... "
+    validations:
+      required: true
+
+  - type: textarea
+    id: solucion-ideal
+    attributes:
+      label: 🛠️ Solución ideal (Opcional)
+      description: Si tienes una idea técnica o de diseño sobre cómo implementarlo, compártela aquí.
+      value: "Una posible solución sería... "
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternativas-consideradas
+    attributes:
+      label: 🔄 Alternativas que has considerado
+      description: Una descripción clara de cualquier alternativa o solución temporal que hayas intentado o pensado.
+      value: "Actualmente lo soluciono haciendo... pero no es ideal porque... "
+    validations:
+      required: false
+
+  - type: textarea
+    id: contexto-adicional
+    attributes:
+      label: 📸 Contexto adicional, capturas de pantalla o bocetos
+      description: Añade aquí cualquier otro contexto, enlaces a imágenes, diagramas de flujo o mockups que ayuden a entender tu propuesta. Puedes arrastrar y soltar imágenes aquí directamente.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 📝 Lista de verificación (Checklist)
+      options:
+        - label: Busqué en los Issues existentes para asegurarme de que esta función no haya sido solicitada ya.
+          required: true
+        - label: Entiendo que la implementación de esta característica dependerá de la prioridad del proyecto y la disponibilidad del equipo.
+          required: true
