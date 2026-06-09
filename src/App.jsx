@@ -1,8 +1,9 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./sections/Home";
-import AboutMe from "./sections/AboutMe";
+import AboutMe from './sections/AboutMe.jsx'; // Conserva la extensión .jsx de la otra rama
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 
