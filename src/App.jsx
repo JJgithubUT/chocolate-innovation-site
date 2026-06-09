@@ -1,5 +1,4 @@
-// import { useState } from 'react'
-
+import React from 'react';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./sections/Home";
@@ -9,7 +8,7 @@ import Contact from "./sections/Contact";
 
 function App() {
   return (
-    <div>
+    <div className="min-h-screen overflow-x-hidden bg-[#0d0d12]">
       <Navbar />
       
       <main>
