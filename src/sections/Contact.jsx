@@ -24,9 +24,12 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-[#000000] text-white py-20 px-6 md:px-12 lg:px-24" id="contacto">
+    <section
+      id="contact"
+      className="bg-[#000000] text-white py-20 px-6 md:px-12 lg:px-24"
+    >
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        
+
         {/* Columna Izquierda: Información Estratégica */}
         <div className="lg:col-span-5">
           <span className="text-sky-200 font-semibold tracking-widest uppercase text-xs bg-sky-400/10 px-4 py-1.5 rounded-full border border-sky-400/20">
