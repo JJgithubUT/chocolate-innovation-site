@@ -92,7 +92,7 @@ function AboutMe() {
   };
 
   return (
-    <section style={styles.section}>
+    <section id="aboutme" style={styles.section}>
       <div style={styles.container}>
         <h1 style={styles.title}>About Chocolate Innovation</h1>
 
@@ -111,9 +111,7 @@ function AboutMe() {
 
           <p style={styles.text}>
             Trabajamos aplicando metodologías ágiles como SCRUM y buenas
-            prácticas de gestión de proyectos basadas en PMBOK, permitiendo el
-            desarrollo de sistemas confiables, escalables y adaptados a las
-            necesidades de cada organización.
+            prácticas de gestión de proyectos basadas en PMBOK.
           </p>
         </div>
 
@@ -125,9 +123,7 @@ function AboutMe() {
           >
             <h3 style={styles.cardTitle}>🎯 Misión</h3>
             <p style={styles.cardText}>
-              Desarrollar soluciones tecnológicas innovadoras que impulsen la
-              transformación digital del sector salud mediante herramientas
-              eficientes, seguras y accesibles.
+              Desarrollar soluciones tecnológicas innovadoras.
             </p>
           </div>
 
@@ -138,9 +134,7 @@ function AboutMe() {
           >
             <h3 style={styles.cardTitle}>🚀 Visión</h3>
             <p style={styles.cardText}>
-              Ser una empresa líder en innovación tecnológica para instituciones
-              de salud, reconocida por la calidad y confiabilidad de sus
-              soluciones.
+              Ser una empresa líder en innovación tecnológica.
             </p>
           </div>
 
@@ -151,8 +145,7 @@ function AboutMe() {
           >
             <h3 style={styles.cardTitle}>💡 Innovación</h3>
             <p style={styles.cardText}>
-              Implementamos tecnologías modernas para optimizar procesos,
-              mejorar la toma de decisiones y facilitar la gestión hospitalaria.
+              Implementamos tecnologías modernas para optimizar procesos.
             </p>
           </div>
 
@@ -163,9 +156,7 @@ function AboutMe() {
           >
             <h3 style={styles.cardTitle}>🤝 Valores</h3>
             <p style={styles.cardText}>
-              Compromiso, responsabilidad, trabajo en equipo, calidad e
-              innovación continua para brindar el mejor servicio a nuestros
-              clientes.
+              Compromiso, responsabilidad y trabajo en equipo.
             </p>
           </div>
         </div>
