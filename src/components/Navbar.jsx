@@ -1,5 +1,11 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
+
+const navLinks = [
+  { href: "#home", label: "Inicio" },
+  { href: "#about", label: "Nosotros" },
+  { href: "#projects", label: "Proyectos" },
+  { href: "#contacto", label: "Contacto" },
+];
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,26 +23,19 @@ function Navbar() {
 
         {/* Menú de Escritorio */}
         <ul className="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wider uppercase">
-          <li>
-            <a href="#home" className="text-gray-400 hover:text-sky-300 transition-colors duration-200">
-              Inicio
-            </a>
-          </li>
-          <li>
-            <a href="#about" className="text-gray-400 hover:text-sky-300 transition-colors duration-200">
-              Nosotros
-            </a>
-          </li>
-          <li>
-            <a href="#projects" className="text-gray-400 hover:text-sky-300 transition-colors duration-200">
-              Proyectos
-            </a>
-          </li>
-          <li>
-            <a href="#contacto" className="bg-sky-400/10 text-sky-200 border border-sky-400/20 px-4 py-2 rounded-xl hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-400 hover:text-neutral-950 hover:border-transparent transition-all duration-300">
-              Contacto
-            </a>
-          </li>
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              {link.label === "Contacto" ? (
+                <a href={link.href} className="bg-sky-400/10 text-sky-200 border border-sky-400/20 px-4 py-2 rounded-xl hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-400 hover:text-neutral-950 hover:border-transparent transition-all duration-300">
+                  {link.label}
+                </a>
+              ) : (
+                <a href={link.href} className="text-gray-400 hover:text-sky-300 transition-colors duration-200">
+                  {link.label}
+                </a>
+              )}
+            </li>
+          ))}
         </ul>
 
         {/* Botón de Menú Móvil (Hamburguesa) */}
@@ -58,42 +57,20 @@ function Navbar() {
       {/* Menú Desplegable Móvil */}
       <div className={`md:hidden bg-[#000000] border-b border-neutral-800 transition-all duration-300 ease-in-out ${isOpen ? 'max-h-64 opacity-100 block' : 'max-h-0 opacity-0 hidden'}`}>
         <ul className="px-6 py-4 space-y-4 text-sm font-medium tracking-wider uppercase">
-          <li>
-            <a 
-              href="#home" 
-              onClick={() => setIsOpen(false)}
-              className="block text-gray-400 hover:text-sky-300 transition-colors"
-            >
-              Inicio
-            </a>
-          </li>
-          <li>
-            <a 
-              href="#about" 
-              onClick={() => setIsOpen(false)}
-              className="block text-gray-400 hover:text-sky-300 transition-colors"
-            >
-              Nosotros
-            </a>
-          </li>
-          <li>
-            <a 
-              href="#projects" 
-              onClick={() => setIsOpen(false)}
-              className="block text-gray-400 hover:text-sky-300 transition-colors"
-            >
-              Proyectos
-            </a>
-          </li>
-          <li className="pt-2">
-            <a 
-              href="#contacto" 
-              onClick={() => setIsOpen(false)}
-              className="block text-center bg-gradient-to-r from-sky-200 to-sky-400 text-neutral-950 font-bold py-2.5 px-4 rounded-xl shadow-lg shadow-sky-400/10 text-xs"
-            >
-              Contacto
-            </a>
-          </li>
+          {navLinks.map((link) => (
+            <li key={link.href} className={link.label === "Contacto" ? "pt-2" : ""}>
+              <a 
+                href={link.href} 
+                onClick={() => setIsOpen(false)}
+                className={link.label === "Contacto" 
+                  ? "block text-center bg-gradient-to-r from-sky-200 to-sky-400 text-neutral-950 font-bold py-2.5 px-4 rounded-xl shadow-lg shadow-sky-400/10 text-xs"
+                  : "block text-gray-400 hover:text-sky-300 transition-colors"
+                }
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
