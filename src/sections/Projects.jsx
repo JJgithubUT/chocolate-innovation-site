@@ -46,34 +46,81 @@ const projects = [
 ];
 
 function Projects() {
+  const styles = {
+    section: {
+      minHeight: "100vh",
+      background: "#000000",
+      color: "#ffffff",
+      padding: "80px 20px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+
+    container: {
+      maxWidth: "1200px",
+      width: "100%",
+      textAlign: "center",
+    },
+
+    badge: {
+      display: "inline-block",
+      background: "rgba(59, 130, 246, 0.15)",
+      color: "#93c5fd",
+      padding: "8px 18px",
+      borderRadius: "999px",
+      border: "1px solid rgba(59, 130, 246, 0.3)",
+      fontSize: "0.85rem",
+      fontWeight: "600",
+      letterSpacing: "1px",
+      textTransform: "uppercase",
+      marginBottom: "20px",
+    },
+
+    title: {
+      fontSize: "3rem",
+      fontWeight: "bold",
+      marginBottom: "20px",
+      color: "#3b82f6",
+    },
+
+    subtitle: {
+      fontSize: "1.15rem",
+      color: "#cbd5e1",
+      maxWidth: "800px",
+      margin: "0 auto 50px auto",
+      lineHeight: "1.8",
+    },
+
+    projectsGrid: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+      gap: "30px",
+      marginTop: "40px",
+    },
+  };
+
   return (
-    <section id="projects" className="bg-[#000000] py-24 px-6 md:px-12 lg:px-24">
-      <div className="max-w-6xl mx-auto">
-
-        {/* Header */}
-        <div className="text-center mb-14">
-          <span className="text-sky-200 font-semibold tracking-widest uppercase text-xs bg-sky-400/10 px-4 py-1.5 rounded-full border border-sky-400/20">
-            Soluciones
-          </span>
-          <h2 className="text-4xl font-black mt-4 mb-4 tracking-tight text-white">
-            Software diseñado para{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-sky-400">
-              el sector salud
-            </span>
-          </h2>
-          <p className="text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
-            Módulos especializados que se integran como un ecosistema completo,
-            adaptados a las necesidades operativas de cada institución.
-          </p>
-        </div>
-
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+    <section id="projects" style={styles.section}>
+      <div style={styles.container}>
+        <span style={styles.badge}>Módulos del Sistema</span>
+        <h2 style={styles.title}>Nuestros Proyectos</h2>
+        <p style={styles.subtitle}>
+          Soluciones tecnológicas avanzadas diseñadas para optimizar la gestión hospitalaria, 
+          mejorar la atención al paciente y automatizar procesos clínicos.
+        </p>
+        
+        <div style={styles.projectsGrid}>
+          {projects.map((project, index) => (
+            <ProjectCard 
+              key={index}
+              icon={project.icon}
+              title={project.title}
+              description={project.description}
+              tag={project.tag}
+            />
           ))}
         </div>
-
       </div>
     </section>
   );
